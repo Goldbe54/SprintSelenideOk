@@ -9,9 +9,9 @@ public class TestInit {
 
     @Parameters({"browser", "headless"})
     @BeforeMethod
-    public void setup(@Optional("edge") String browser, @Optional("false") String headless) {
+    public void setup(@Optional("chrome") String browser, @Optional("false") String headless) {
         Configuration.browser = browser;
         Configuration.headless = Boolean.parseBoolean(headless);
-        Configuration.baseUrl = "https://www.themoviedb.org/";
+        Configuration.baseUrl = "https://www.themoviedb.org";
     }
 }

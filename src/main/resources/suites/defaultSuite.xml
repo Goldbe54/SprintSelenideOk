@@ -8,6 +8,7 @@
 
     <test name="Registration tests">
         <parameter name="browser" value="opera"></parameter>
+        <parameter name="headless" value="true"></parameter>
 
         <classes>
 
