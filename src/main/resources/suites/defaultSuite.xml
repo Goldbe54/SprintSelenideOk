@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Registration with order suit">
+    <listeners>
+
+    </listeners>
+
+    <test name="Registration tests">
+        <parameter name="browser" value="opera"></parameter>
+
+        <classes>
+
+        </classes>
+    </test>
+</suite>
