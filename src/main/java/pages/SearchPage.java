@@ -9,7 +9,7 @@ import java.util.List;
 public class SearchPage extends SearchResultElements {
 
     @Step("Get names of rearch results")
-    public List<String> getSearchResults(String searchQuery){
+    public List<String> getSearchResults(){
 
         List<String> results = ElementUtil.getListOfString(getAllProducts());
         return results;

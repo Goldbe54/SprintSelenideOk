@@ -6,7 +6,7 @@ import commom.AbstractBaseComponent;
 import static java.lang.String.format;
 
 public class HomeElements extends AbstractBaseComponent {
-    private final String SEARCH_FIELD = "//input[@placeholder='Search for a movie, tv show, person...']";
+    private final String SEARCH_FIELD = "//form[@id='inner_search_form']/label/input";
 
     protected SelenideElement searchFieldElement() {
         return waitClickabilityOfElement(SEARCH_FIELD);
