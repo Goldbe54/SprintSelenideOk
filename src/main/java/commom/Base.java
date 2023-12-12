@@ -1,7 +1,6 @@
 package commom;
 
 import com.codeborne.selenide.Screenshots;
-import com.codeborne.selenide.impl.Screenshot;
 import com.google.common.io.Files;
 import io.qameta.allure.Attachment;
 import lombok.SneakyThrows;
