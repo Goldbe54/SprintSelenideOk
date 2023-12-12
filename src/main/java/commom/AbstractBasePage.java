@@ -2,17 +2,16 @@ package commom;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
-import org.openqa.selenium.By;
-
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.Condition;
+import org.openqa.selenium.By;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
-public class AbstractBasePage extends Base{
+public class AbstractBasePage extends Base {
 
     private static final int DURATION = 7;
 
