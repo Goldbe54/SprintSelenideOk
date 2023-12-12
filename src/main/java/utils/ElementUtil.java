@@ -12,8 +12,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ElementUtil extends Base {
 
-    public static void moveToElement(String locator) {
-        actions().moveToElement($(By.xpath(locator))).release().build().perform();
+    public static void moveToElement(SelenideElement element) {
+        actions().moveToElement(element).release().build().perform();
         sleep(300);
     }
 
