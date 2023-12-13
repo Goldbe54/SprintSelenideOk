@@ -20,7 +20,7 @@ public class AbstractBaseComponent extends BasePage {
         return waitClickabilityOfElement(format(HEADER_GENERAL_CATEGORY,tabValue,categoryValue));
     }
 
-    protected SelenideElement searchFieldElement() {
+    protected SelenideElement heagerLoginElement() {
         return waitClickabilityOfElement(HEADER_LOGIN_BUTTON);
     }
 

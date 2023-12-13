@@ -8,7 +8,7 @@ public class LoginElements extends AbstractBaseComponent {
     private final String PASSPORT_INPUT ="//input[@name='password']";
     private final String LOGIN_BUTTON = "//input[@id='login_button']";
 
-    protected SelenideElement getUserName() {
+    protected SelenideElement getUserNameField() {
         return waitClickabilityOfElement(USER_NAME_INPUT);
     }
 
