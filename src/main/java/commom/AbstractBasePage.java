@@ -13,6 +13,8 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class AbstractBasePage extends Base {
 
+    public static final Logger logger = LogManager.getLogger(AbstractBaseTest.class);
+
     private static final int DURATION = 7;
 
     protected SelenideElement waitVisibilityOfElement(String locator) {

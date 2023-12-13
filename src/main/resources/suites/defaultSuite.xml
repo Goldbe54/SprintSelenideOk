@@ -2,16 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Registration with order suit">
-    <listeners>
+<!--    <listeners>-->
 
-    </listeners>
+<!--    </listeners>-->
 
     <test name="Registration tests">
-        <parameter name="browser" value="opera"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <parameter name="headless" value="true"></parameter>
 
         <classes>
-
+            <class name="tests.smokeTests.TopRatedTest" > </class>
+            <class name="tests.smokeTests.SearchFieldTest" > </class>
         </classes>
     </test>
 </suite>
