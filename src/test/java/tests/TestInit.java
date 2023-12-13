@@ -3,12 +3,16 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class TestInit {
+
+    public static final Logger logger = LogManager.getLogger(TestInit.class);
 
     @Parameters({"browser", "headless"})
     @BeforeMethod

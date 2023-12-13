@@ -3,17 +3,20 @@ package commom;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 
 import java.time.Duration;
+
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class AbstractBasePage extends Base {
+public class BasePage extends Base {
 
-    public static final Logger logger = LogManager.getLogger(AbstractBaseTest.class);
+    public static final Logger logger = LogManager.getLogger(BasePage.class);
 
     private static final int DURATION = 7;
 
