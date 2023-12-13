@@ -2,15 +2,13 @@ package utils;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import commom.Base;
-import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class ElementUtil extends Base {
+public class ElementUtil {
 
     public static void moveToElement(SelenideElement element) {
         actions().moveToElement(element).release().build().perform();

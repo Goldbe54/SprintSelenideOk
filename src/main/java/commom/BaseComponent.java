@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static java.lang.String.*;
 
-public class AbstractBaseComponent extends AbstractBasePage {
+public class BaseComponent extends BasePage {
     private final String HEADER_GENERAL_TAB = "//ul[contains(@class,'dropdown_menu')]/li/a[@href='/%s']";
     private final String HEADER_GENERAL_CATEGORY = "//ul[contains(@class,'dropdown_menu')]/li/a[@href='/%s']/..//a[contains(text(),'%s')]";
 

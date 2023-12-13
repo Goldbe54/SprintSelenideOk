@@ -1,12 +1,9 @@
 package elements;
 
 import com.codeborne.selenide.ElementsCollection;
-import commom.AbstractBaseComponent;
-import org.openqa.selenium.By;
+import commom.BaseComponent;
 
-import static com.codeborne.selenide.Selenide.*;
-
-public class BrowseProductElements extends AbstractBaseComponent {
+public class BrowseProductElements extends BaseComponent {
     private final String USER_SCORE_ICON = "//span[contains(@class, 'icon icon')]";
 
     protected ElementsCollection allUserScoreIcon(){

@@ -1,10 +1,9 @@
 package elements;
 
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
-import commom.AbstractBaseComponent;
+import commom.BaseComponent;
 
-public class SearchResultElements extends AbstractBaseComponent {
+public class SearchResultElements extends BaseComponent {
 
     private final String LIST_OF_PRODUCTS = "//div[@class='search_results movie ']//div[@class='details']//a";
 
