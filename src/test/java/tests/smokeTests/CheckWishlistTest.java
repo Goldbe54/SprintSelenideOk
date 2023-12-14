@@ -11,8 +11,8 @@ import pages.LoginPage;
 import pages.MyWishListPage;
 import tests.TestInit;
 
-import static java.lang.Thread.sleep;
-import static utils.ConfigProvider.*;
+import static utils.ConfigProvider.LOGIN;
+import static utils.ConfigProvider.PASSWORD;
 
 public class CheckWishlistTest extends TestInit {
 
@@ -23,21 +23,21 @@ public class CheckWishlistTest extends TestInit {
 
     @Step("Loading the Base Page")
     @BeforeMethod
-    private void setUp(){
+    private void setUp() {
 
         homePage = new HomePage();
-        loginPage= new LoginPage();
+        loginPage = new LoginPage();
         myWishListPage = new MyWishListPage();
         softAssert = new SoftAssert();
     }
 
     @Test(description = "PQ-35")
     @Description("Check Watchlist")
-    private void checkTheWatchList(){
+    private void checkTheWatchList() {
 
-        loginPage.logInAtAccount(LOGIN,PASSWORD);
+        loginPage.logInAtAccount(LOGIN, PASSWORD);
         homePage.passToHomePage();
-        String titleFromAddedToWishList =homePage.addToWishList();
+        String titleFromAddedToWishList = homePage.addToWishList();
         homePage.setProfileWatchList();
         String titleFromWishList = myWishListPage.tookFilmTitle();
 

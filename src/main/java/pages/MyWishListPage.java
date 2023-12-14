@@ -5,7 +5,7 @@ import elements.MyWishListElements;
 
 public class MyWishListPage extends MyWishListElements {
 
-    public String tookFilmTitle(){
+    public String tookFilmTitle() {
         SelenideElement titleProduct = tookWishListTitle();
         String title = titleProduct.getText();
         return title;
