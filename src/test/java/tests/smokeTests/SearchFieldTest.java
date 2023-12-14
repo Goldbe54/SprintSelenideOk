@@ -1,5 +1,6 @@
 package tests.smokeTests;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.testng.annotations.BeforeMethod;
@@ -29,8 +30,6 @@ public class SearchFieldTest extends TestInit {
         homePage = new HomePage();
         searchPage = new SearchPage();
         softAssert = new SoftAssert();
-
-        open("/");
     }
 
 
@@ -42,7 +41,7 @@ public class SearchFieldTest extends TestInit {
         searchResults = searchPage.getSearchResults();
 
         for (String name : searchResults) {
-           softAssert.assertTrue(name.contains(searchQuery), "Asser false:" + name);
+            softAssert.assertTrue(name.contains(searchQuery), "Asser false:" + name);
         }
         softAssert.assertAll();
     }

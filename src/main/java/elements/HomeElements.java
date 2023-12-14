@@ -3,25 +3,30 @@ package elements;
 import com.codeborne.selenide.SelenideElement;
 import commom.AbstractBaseComponent;
 
+import static com.codeborne.selenide.Condition.interactable;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$x;
+import static java.lang.String.format;
+
 public class HomeElements extends AbstractBaseComponent {
     private final String SEARCH_FIELD = "//form[@id='inner_search_form']/label/input";
     private final String FIRST_PRODUCT_CONTEXT_MENU = "(//div[@class='glyphicons_v2 circle-more white'])[1]";
     private final String FIRST_PRODUCT_WATCH_LIST = "//div[@class='k-animation-container'][@aria-hidden='false']//a/span[@class='glyphicons_v2 bookmark pad_right']";
-    private final String SPECIFIC_TITLE_PRODUCT ="(//div[@class='card style_1']//h2)[1]";
+    private final String SPECIFIC_TITLE_PRODUCT = "(//div[@class='card style_1']//h2)[%s]";
 
     protected SelenideElement searchFieldElement() {
-        return waitClickabilityOfElement(SEARCH_FIELD);
+        return $x(SEARCH_FIELD).shouldBe(interactable);
     }
 
-    protected SelenideElement getFirstProductContextMenu(){
-        return  waitClickabilityOfElement(FIRST_PRODUCT_CONTEXT_MENU);
+    protected SelenideElement getFirstProductContextMenu() {
+        return $x(FIRST_PRODUCT_CONTEXT_MENU).shouldBe(interactable);
     }
 
-    protected SelenideElement getFirstProductWatchList(){
-        return waitClickabilityOfElement(FIRST_PRODUCT_WATCH_LIST);
+    protected SelenideElement getFirstProductWatchList() {
+        return $x(FIRST_PRODUCT_WATCH_LIST).shouldBe(interactable);
     }
 
-    protected SelenideElement getSpecificFirstTitleProduct(){
-        return waitVisibilityOfElement(SPECIFIC_TITLE_PRODUCT);
+    protected SelenideElement getSpecificFirstTitleProduct(int number) {
+        return $x(format(SPECIFIC_TITLE_PRODUCT, number)).shouldBe(visible);
     }
 }

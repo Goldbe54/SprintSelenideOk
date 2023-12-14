@@ -3,10 +3,17 @@ package elements;
 import com.codeborne.selenide.SelenideElement;
 import commom.AbstractBaseComponent;
 
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
+
 public class MyWishListElements  extends AbstractBaseComponent {
-    private final String MY_WISHLIST_TITLE = "//div[@class='title']//a[@href='/movie/726209']";
+    private final String MY_WISHLIST_TITLES = "//div[@class='title']//a";
+    private final String REMOVE_BUTTON = "(//span[@class='remove wrapper'])[%s]";
 
     protected SelenideElement tookWishListTitle (){
-        return waitVisibilityOfElement(MY_WISHLIST_TITLE);
+        return $x(MY_WISHLIST_TITLES).shouldBe(interactable);
+    }
+    protected SelenideElement removeFilmFromWishlist(){
+        return $x(REMOVE_BUTTON).shouldBe(interactable);
     }
 }

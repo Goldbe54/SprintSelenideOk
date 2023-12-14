@@ -1,7 +1,10 @@
 package pages;
 
+import com.codeborne.selenide.SelenideElement;
 import elements.HomeElements;
 import io.qameta.allure.Step;
+
+import static java.lang.Thread.sleep;
 
 public class HomePage extends HomeElements {
 
@@ -21,12 +24,17 @@ public class HomePage extends HomeElements {
     }
 
     @Step("Add film to the WishList")
-    public HomePage addToWishList(){
+    public String addToWishList(){
+        String title = getSpecificFirstTitleProduct(1).getText();
+
         getFirstProductContextMenu().click();
         getFirstProductWatchList().click();
+        successAddToWatchList().isEnabled();
+        sleep(5000);
 
-        return this;
+        return title;
     }
+
 
     public HomePage setProfileWatchList(){
         getUserProfile().click();
