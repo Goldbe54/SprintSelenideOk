@@ -15,5 +15,4 @@ public class HomePage extends HomeElements {
 
         return this;
     }
-
 }
