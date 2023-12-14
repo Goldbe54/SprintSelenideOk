@@ -21,14 +21,10 @@ public class TopRatedTest extends TestInit {
     BrowseProductPage browseProductPage;
     SoftAssert softAssert;
 
-    @Step("Loading the basic page")
     @BeforeMethod
     public void setUp() {
         browseProductPage = new BrowseProductPage();
         softAssert = new SoftAssert();
-
-        open("/");
-        WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
     @Test(description = "PQ-27")

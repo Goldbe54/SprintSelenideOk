@@ -22,15 +22,11 @@ public class SearchFieldTest extends TestInit {
 
     private String searchQuery = "Barbie";
 
-    @Step("Loading the Base Page")
     @BeforeMethod
     private void setUp() {
-
         homePage = new HomePage();
         searchPage = new SearchPage();
         softAssert = new SoftAssert();
-
-        open("/");
     }
 
 
