@@ -1,5 +1,8 @@
 package commom;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.codeborne.selenide.Screenshots;
 import com.google.common.io.Files;
 import io.qameta.allure.Attachment;

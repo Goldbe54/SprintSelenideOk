@@ -11,7 +11,8 @@ public class TestListener extends BasePage implements ITestListener {
         logger.info("---------------------------------------------------------------");
         logger.info("Failed because of - " + result.getThrowable());
         logger.info("---------------------------------------------------------------");
-        captureScreen();}
+        captureScreen();
+    }
 
     @Override
     public void onTestStart(ITestResult result) {

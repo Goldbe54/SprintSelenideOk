@@ -1,7 +1,5 @@
 package tests.smokeTests;
 
-import elements.BrowseProductElements;
-import elements.ProductElements;
 import io.qameta.allure.Description;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,7 +29,7 @@ public class GenresFilterTest extends TestInit {
     @Test(description = "PQ-33")
     @Description("Checking the serviceability of filters for one genre")
     public void oneGenreTest() {
-        browseProductPage.enterThePage(tab,category);
+        browseProductPage.enterThePage(tab, category);
 
         expectedGenre = browseProductPage.selectRandomGenreFilter();
 

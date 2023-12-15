@@ -2,9 +2,6 @@ package utils;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +19,7 @@ public class ElementUtil {
     public static List<String> getListOfString(ElementsCollection listSE) {
         List<String> listSt = new ArrayList<>();
 
-        for(SelenideElement element : listSE) {
+        for (SelenideElement element : listSE) {
             listSt.add(element.getText());
         }
 

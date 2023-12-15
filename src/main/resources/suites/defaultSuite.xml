@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Registration with order suit">
+<suite name="Defaul suite with smoke tests">
 <!--    <listeners>-->
 
 <!--    </listeners>-->
 
-    <test name="Registration tests">
+    <test name="Smoke tests">
         <parameter name="browser" value="chrome"></parameter>
-        <parameter name="headless" value="true"></parameter>
+        <parameter name="headless" value="false"></parameter>
 
         <classes>
             <class name="tests.smokeTests.TopRatedTest" > </class>
             <class name="tests.smokeTests.SearchFieldTest" > </class>
+            <class name="tests.smokeTests.GenresFilterTest" > </class>
+            <class name="tests.smokeTests.CheckWishlistTest" > </class>
         </classes>
     </test>
 </suite>

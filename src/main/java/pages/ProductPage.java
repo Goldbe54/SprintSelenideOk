@@ -1,7 +1,6 @@
 package pages;
 
 import elements.ProductElements;
-import io.qameta.allure.Step;
 import utils.ElementUtil;
 
 import java.util.List;
