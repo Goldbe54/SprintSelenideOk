@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import elements.HomeElements;
 import io.qameta.allure.Step;
 
@@ -27,7 +28,7 @@ public class HomePage extends HomeElements {
         getFirstProductContextMenu().click();
         getFirstProductWatchList().click();
         successAddToWatchList().isEnabled();
-        sleep(5000);
+        Selenide.sleep(5000);
 
         return title;
     }
@@ -36,6 +37,7 @@ public class HomePage extends HomeElements {
     public HomePage setProfileWatchList() {
         getUserProfile().click();
         getProfileWatchList().click();
+
         return this;
     }
 }

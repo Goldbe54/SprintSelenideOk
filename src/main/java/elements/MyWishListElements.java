@@ -1,12 +1,12 @@
 package elements;
 
 import com.codeborne.selenide.SelenideElement;
-import commom.AbstractBaseComponent;
+import commom.BaseComponent;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MyWishListElements  extends AbstractBaseComponent {
+public class MyWishListElements  extends BaseComponent {
     private final String MY_WISHLIST_TITLES = "//div[@class='title']//a";
     private final String REMOVE_BUTTON = "(//span[@class='remove wrapper'])[%s]";
 

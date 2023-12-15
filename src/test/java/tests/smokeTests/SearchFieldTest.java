@@ -1,8 +1,6 @@
 package tests.smokeTests;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -11,8 +9,6 @@ import pages.SearchPage;
 import tests.TestInit;
 
 import java.util.List;
-
-import static com.codeborne.selenide.Selenide.open;
 
 public class SearchFieldTest extends TestInit {
 
@@ -23,10 +19,8 @@ public class SearchFieldTest extends TestInit {
 
     private String searchQuery = "Barbie";
 
-    @Step("Loading the Base Page")
     @BeforeMethod
     private void setUp() {
-
         homePage = new HomePage();
         searchPage = new SearchPage();
         softAssert = new SoftAssert();

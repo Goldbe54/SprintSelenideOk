@@ -8,7 +8,7 @@ public interface ConfigProvider {
     Config config = readConf();
 
     static Config readConf() {
-        return ConfigFactory.load("applicattion.conf");
+        return ConfigFactory.load("application.conf");
     }
 
     String LOGIN = readConf().getString("login");

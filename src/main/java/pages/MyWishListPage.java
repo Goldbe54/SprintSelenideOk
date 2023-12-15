@@ -11,7 +11,7 @@ public class MyWishListPage extends MyWishListElements {
         return title;
     }
 
-    public MyWishListPage removeFilmFromWishList(){
+    public MyWishListPage removeFilmFromWishList() {
         removeFilmFromWishlist().click();
         return this;
     }
