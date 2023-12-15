@@ -21,17 +21,6 @@ public class HomePage extends HomeElements {
         return this;
     }
 
-    @Step("Add film to the WishList")
-    public String addToWishList() {
-        String title = getSpecificFirstTitleProduct(1).getText();
-
-        getFirstProductContextMenu().click();
-        getFirstProductWatchList().click();
-        successAddToWatchList().isEnabled();
-        Selenide.sleep(5000);
-
-        return title;
-    }
 
 
     public HomePage setProfileWatchList() {

@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MyWishListElements  extends BaseComponent {
     private final String MY_WISHLIST_TITLES = "//div[@class='title']//a";
-    private final String REMOVE_BUTTON = "(//span[@class='remove wrapper'])[%s]";
+    private final String REMOVE_BUTTON = "//span[@class='remove wrapper']";
 
     protected SelenideElement tookWishListTitle (){
         return $x(MY_WISHLIST_TITLES).shouldBe(interactable);

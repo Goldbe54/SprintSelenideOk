@@ -15,4 +15,5 @@ public class MyWishListPage extends MyWishListElements {
         removeFilmFromWishlist().click();
         return this;
     }
+
 }
