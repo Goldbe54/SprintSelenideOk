@@ -15,6 +15,39 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>baseURLTheMovieDB</id>
+            <properties>
+                <site.url>https://www.themoviedb.org/</site.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>headless_enabled</id>
+            <properties>
+                <headless.mode>true</headless.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>chrome-browser</id>
+            <properties>
+                <browser.mode>chrome</browser.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>firefox-browser</id>
+            <properties>
+                <browser.mode>firefox</browser.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>opera-browser</id>
+            <properties>
+                <browser.mode>opera</browser.mode>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <testResources>
             <testResource>
